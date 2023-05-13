@@ -4,9 +4,6 @@ class ComponentApp extends HTMLElement {
     }
     
     
-    // agregamos un evento que suma el numero de clicks
-    // y lo muestra en el titulo
-    // al hacer click en el componente
     connectedCallback(){
         this.innerHTML = `
             <h1>Clickme 0</h1>

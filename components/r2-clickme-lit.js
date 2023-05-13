@@ -1,5 +1,5 @@
 //componet lit
-import { LitElement, html, css, property  } from 'lit-element';
+import { LitElement, html, css  } from 'lit-element';
 
 export class R2ClickMeLit extends LitElement {
     
@@ -28,9 +28,7 @@ export class R2ClickMeLit extends LitElement {
 
     render(){
         return html`
-            <h1 @click=${()=>{this.counter++}} >${this.title} ${this.counter}</h1>
             <h1 @click=${this.add} >${this.title} ${this.counter}</h1>
-
         `;
     }
 
