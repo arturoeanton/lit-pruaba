@@ -2,6 +2,7 @@
 import { LitElement, html, css  } from 'lit-element';
 import './r2-button-magic.js';
 import './r2-input.js';
+import './r2-avatars.js';
 
 export class R2SearchCards extends LitElement {
     
