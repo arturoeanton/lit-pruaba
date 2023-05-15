@@ -7,10 +7,24 @@ import './r2-avatars.js';
 export class R2SearchCards extends LitElement {
     
     static styles = [css`
+    :host{
+        display: block;
+        padding: 10px;
+        padding-left: 230px;
+    }
+
+    /* Estilos para la versión responsive */
+    @media (max-width: 768px) {
+      :host {
+        padding-left: 0px;
+      }
+    }
+
     .list{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 16px;
+      
     }
 
     form{
