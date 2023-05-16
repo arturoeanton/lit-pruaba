@@ -22,12 +22,21 @@
 <body>
 
     <r2-sidecard>
-        HOLA
         <h2>Menu</h2>
-        <p>Contenido del sidecard.</p>
+        <p>
+            <r2-button-bar add-button-handler="const modal = document.querySelector('r2-modal'); modal.isOpen = true;"></r2-button-bar>
+            <r2-menu items="() => {return [
+                {item:'Item 1', fx:()=>{console.log('1')}}, 
+                {item:'Item 2', fx:()=>{console.log('2')}},
+                {item:'Item 3', fx:()=>{console.log('3')}},
+                ]}"> </r2-menu>
+         </p>
     </r2-sidecard>
 
-
+    <r2-modal
+    header="Modal Header"
+    body="Modal Body"
+  ></r2-modal>
     
     <r2-search-cards>
         <r2-card title="My Card 1" id="c1">
@@ -64,8 +73,13 @@
         <r2-card title="My Card 11" id="c11">
             Esto es una prueba 
         </r2-card>
-        <r2-card title="My Card 12" id="c12">
+        <r2-card title="My Card 12"  id="c12">
             Esto es una prueba <input type="button" name="" id="" value="Aceptar">
+            <r2-button-bar slot="footer"
+            add-button-handler="console.log('Add clickeado!')"
+            edit-button-handler="console.log('Editar clickeado!');"
+            delete-button-handler=" console.log('Eliminar clickeado!')"
+            ></r2-button-bar>
         </r2-card>
     </r2-search-cards>
 
@@ -74,6 +88,11 @@
     <script  src="components/r2-card.js" type="module"></script>
     <script  src="components/r2-search-cards.js" type="module"></script>
     <script src="components/r2-sidecard.js" type="module"></script>
+    <script src="components/r2-button-bar.js" type="module"></script>
+    <script src="components/r2-modal.js" type="module"></script>
+
+    <script src="components/r2-menu.js" type="module"></script>
+    
 
 </body>
 </html>
